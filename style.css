@@ -229,10 +229,10 @@ video{
 .cd-card{max-width:460px;margin:0 auto;background:var(--white);border-radius:2.2rem;padding:3rem 2rem;border:1px solid var(--border);box-shadow:var(--shadow);text-align:center}
 .cd-quote{font-style:italic;font-size:1.15rem;line-height:1.65;color:var(--text-mid);margin-bottom:.5rem}
 .cd-script{font-family:'Pinyon Script',cursive;font-size:2.2rem;color:var(--sage);line-height:1.2;display:block;margin-bottom:.25rem}
-.cd-date{font-family:'Montserrat',sans-serif;font-size:.7rem;letter-spacing:.22em;color:var(--sage-dark);text-transform:uppercase;margin-bottom:2.5rem;margin-top:1.25rem;display:block}
+.cd-date{font-family:'Montserrat',sans-serif;font-weight:350;font-size:.7rem;letter-spacing:.22em;color:var(--sage-dark);text-transform:uppercase;margin-bottom:2.5rem;margin-top:1.25rem;display:block}
 .cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
 .cd-unit{display:flex;flex-direction:column;align-items:center;gap:.4rem}
-.cd-num{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,9vw,3.4rem);font-weight:300;color:var(--text-dark);line-height:1;position:relative}
+.cd-num{font-family:'Cormorant Garamond' ,serif;font-size:clamp(2.6rem,9vw,3.4rem);font-weight:300;color:var(--text-dark);line-height:1;position:relative}
 .cd-num::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--sage-light),transparent)}
 .cd-lbl{font-family:'Montserrat',sans-serif;font-size:.52rem;letter-spacing:.25em;text-transform:uppercase;color:var(--sage-dark)}
 
