@@ -504,10 +504,6 @@ video{
 
     width:100%;
 
-    aspect-ratio:9 / 16;
-
-    max-height:78svh;
-
     border-radius:1.25rem;
 
     overflow:hidden;
@@ -518,34 +514,28 @@ video{
 
     contain:paint;
 
-    -webkit-overflow-scrolling:touch;
+    line-height:0;
   }
 
   .evt-video video{
-    position:absolute;
-
-    inset:0;
-
     width:100%;
-    height:100%;
 
-    object-fit:contain;
-    background:#000;
-
-    object-position:center center;
-
-    overflow:hidden;
+    height:auto;
 
     display:block;
+
+    object-fit:contain;
+
+    background:#000;
 
     transform:translateZ(0);
     -webkit-transform:translateZ(0);
 
     backface-visibility:hidden;
     -webkit-backface-visibility:hidden;
-
-    will-change:transform;
   }
+
+}
 
 }
 }
