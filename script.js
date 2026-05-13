@@ -250,9 +250,12 @@ function clearRsvpError() {
   errEl.textContent = '';
 }
 
-function getCheckedEvents() {
-  const checkboxes = document.querySelectorAll('.evt-checks input[type="checkbox"]:checked');
-  return Array.from(checkboxes).map(cb => cb.value);
+function getSelectedTransport() {
+  const selected = document.querySelector(
+    '.evt-checks input[type="radio"]:checked'
+  );
+
+  return selected ? selected.value : '';
 }
 
 async function submitRSVP() {
@@ -262,15 +265,15 @@ async function submitRSVP() {
   const phone  = (document.getElementById('rsvp-phone').value || '').trim();
   const guests = document.getElementById('rsvp-guests').value;
   const msg    = (document.getElementById('rsvp-msg').value || '').trim();
-  const events = getCheckedEvents();
+  const transport = getSelectedTransport();
 
   if (!name) {
     showRsvpError('Please enter your full name to RSVP.');
     document.getElementById('rsvp-name').focus();
     return;
   }
-  if (events.length === 0) {
-    showRsvpError('Please select at least one event you will be attending.');
+  if (!transport) {
+    showRsvpError('Please select at least one transport you will be attending.');
     return;
   }
 
@@ -282,15 +285,15 @@ async function submitRSVP() {
     name,
     phone,
     guest_count: guests,
-    attending_events: events.join(', '),
+    transportation: transport,
     message: msg,
     clientId: 'MuskanwedsKaran-wedding-2026'
   };
 
   try {
-    const res = await fetch('https://wedding-backend-k67l.onrender.com/api/rsvp', {
+    const res = await fetch('https://script.google.com/macros/s/AKfycbwgmWNDMgviiOlG6goNFRz98fi8d1_z_HbC8IEQ0aGuRGHWL1lYDZSpAxWRtNllJdbSyA/exec', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(data)
     });
     const result = await res.json();
