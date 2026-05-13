@@ -141,12 +141,6 @@ video{
 /* ── HERO ──────────────────────────────────────── */
 #hero{position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--cream-2);padding:3rem 1rem}
 #hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 120% 80% at 50% 0%,rgba(168,197,160,.18) 0%,transparent 65%)}
-.hero-corner{position:absolute;inset:1.25rem;pointer-events:none;z-index:2}
-.hero-corner::before,.hero-corner::after,.hero-corner span::before,.hero-corner span::after{content:'';position:absolute;width:54px;height:54px;border-color:var(--gold);border-style:solid;opacity:.7}
-.hero-corner::before{top:0;left:0;border-width:2px 0 0 2px}
-.hero-corner::after{top:0;right:0;border-width:2px 2px 0 0}
-.hero-corner span::before{bottom:0;left:0;border-width:0 0 2px 2px}
-.hero-corner span::after{bottom:0;right:0;border-width:0 2px 2px 0}
 
 .hero-card{position:relative;z-index:3;max-width:620px;min-width:0;width:100%;background:rgba(253,251,247,.93);backdrop-filter:blur(18px);border:1px solid rgba(194,168,120,.32);border-radius:2.2rem;padding:clamp(3rem,6vw,4rem) clamp(1.5rem,5vw,3rem);box-shadow:var(--shadow),0 0 0 4px rgba(197,138,150,.1) inset;text-align:center;display:flex;flex-direction:column;align-items:center;overflow:hidden}
 
@@ -521,6 +515,10 @@ video{
     background:#000;
 
     isolation:isolate;
+
+    contain:paint;
+
+    -webkit-overflow-scrolling:touch;
   }
 
   .evt-video video{
@@ -533,7 +531,9 @@ video{
 
     object-fit:cover;
 
-    object-position:center;
+    object-position:center center;
+
+    overflow:hidden;
 
     display:block;
 
@@ -542,8 +542,9 @@ video{
 
     backface-visibility:hidden;
     -webkit-backface-visibility:hidden;
+
+    will-change:transform;
   }
 
 }
-
 }
