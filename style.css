@@ -134,7 +134,7 @@ video{
 #main-content{display:none; opacity:0; transition: opacity 1.5s ease;}
 #main-content.visible{display:block; opacity: 1;}
 /* ── GLOBALS ───────────────────────────────────── */
-.sec-label{font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.75rem}
+.sec-label{font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.38em;text-transform:uppercase;color:var(--sage-dark);display:block;margin-bottom:.75rem}
 .sec-heading{font-family:'Allura',cursive;font-size:clamp(3rem,9vw,5rem);line-height:1.1;color:var(--sage-dark);margin-bottom:.5rem}
 .tc{text-align:center}
 
