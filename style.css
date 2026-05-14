@@ -337,6 +337,12 @@ video{
 }
 .dir-btn svg{width:13px;height:13px}
 
+#family-section{
+  background:var(--sage-deep);
+  color:#fff;
+  padding:5rem 1.5rem;
+}
+
 /* ── RSVP ─────────────────────────────────────────── */
 #rsvp-section{padding:6rem 1.5rem;background:url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="%237A1A2E" fill-opacity="0.08"/></svg>'),var(--sage-pale);border-top:1px solid var(--sage-border)}
 .rsvp-wrap{max-width:540px;margin:3rem auto 0;background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border-radius:2rem;padding:3.5rem 2.5rem;border:1px solid var(--sage-border);box-shadow:var(--shadow)}
